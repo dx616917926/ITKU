@@ -1,0 +1,110 @@
+
+git clone apple@class.room:~/project/挨踢库 参考
+
+
+
+
+t.divein.xyz
+1. 注册
+url:User/Register
+method:post
+参数：
+{
+	phone:“13422344567”,
+	username:"test",
+	gender:"f",
+	password:"1234"
+}
+返回：
+{
+	result:"success"
+	data:{
+		UserID:123,
+		UserName :"",
+		Gender :"",
+		Phone :"",
+		Token :""
+	}
+}
+
+
+2. 登陆：
+url:User/Login
+method:post
+参数：
+{
+	phone:“13422344567”,
+	password:"1234"
+}
+
+返回：
+{
+	result:"success"
+	data:{
+		UserID:123,
+		UserName :"",
+		Gender :"",
+		Phone :"",
+		Token :""
+	}
+}
+
+3. 修改密码：
+url:User/ChangePwd
+method:post
+参数：
+{
+	token：“”
+	phone:“13422344567”,
+	newPassword:"1234",
+	oldPassword:"1234"
+}
+
+返回：
+{
+	result:"success"
+}
+
+4. 获取分类：
+url:Problem/GetAllCategory
+method:post
+参数：
+{
+	token：“”
+}
+
+返回：
+{
+	result:"success",
+	data:[
+		{ID:"",Name:""}
+	]
+}
+
+5. 随机获取试题：
+url:Problem/TakeExercise
+method:post
+参数：
+{
+	token：“”,
+	numb:20,
+}
+
+返回：
+{
+	result:"success",
+	data:[
+		{
+			ID
+			Name
+			Company
+			SourceCode
+			CategoryID
+			Description
+			Disable
+			Answer
+		}
+	]
+}
+
+
